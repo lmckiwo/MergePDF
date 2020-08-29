@@ -8,11 +8,10 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
       - run:
-          command: pyinstaller --onefile mergepdf.py
+          command: |
+            sudo pip install -r requirements.txt
+            pyinstaller --onefile mergepdf.py
           name: Test
 
 workflows:
