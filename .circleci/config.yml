@@ -13,7 +13,7 @@ jobs:
             sudo pip install -r requirements.txt
             mkdir /tmp/artifacts
             pyinstaller --onefile mergepdf.py
-            cp ~/mydir/dist/mergepdf* /tmp/artifacts
+            cp ~/mydir/dist/mergepdf /tmp/artifacts
 
       - store_artifacts:
           path: /tmp/artifacts
