@@ -19,7 +19,7 @@ jobs:
 
   publish-github-release:
     docker:
-      - image: cibuilds/github:0.10
+      - image: cibuilds/github
     steps:
       - attach_workspace:
           at: /tmp/artifacts
