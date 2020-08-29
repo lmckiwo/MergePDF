@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  python: circleci/python@0.2.1
+  python: circleci/python:3.7.8
 
 jobs:
   build-and-test:
@@ -12,7 +12,7 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: ./manage.py test
+          command: pyinstaller --onefile mergepdf.py
           name: Test
 
 workflows:
